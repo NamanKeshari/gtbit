@@ -39,6 +39,7 @@
 
             mediaRecorder.onstop = function() {
                 let blob  = new Blob(chunks, {type: "video/mp4"});
+                chunks = [];
                 let blobUrl = URL.createObjectURL(blob);
                 console.log(blobUrl);
                 let a = document.createElement("a");
